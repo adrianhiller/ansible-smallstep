@@ -29,17 +29,17 @@ step_cert_list:
     provisioner: "acme"
 ```
 
-| Dictionary Key | Default            | Description                                                                                                                    | Required | In-line Var Equivalent |
-| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------- |
-| `name`         | `ansible_fqdn`     | String, Name for the local files - certificate, key, and systemd timer.                                                        | No       |                        |
-| `subject`      | `ansible_fqdn`     | String, Common name, DNS name, or IP address that will be set as the subject for the certificate, e.g. `client01.example.com`. | No       |                        |
-| `path`         | `/etc/step/certs/` | Path, Folder to store x509 certificate.                                                                                        | No       |                        |
-| `san_0`        | not defined        | String, Subject Alternative Name (SAN) for the x509 certificate, useful for setting the host IP in the x509 certificate.       | No       | `--san`                |
-| `san_1`        | not defined        | String, Additional SAN for the x509 certificate.                                                                               | No       | `--san`                |
-| `not_after`    | not defined        | String, 'Time' (RFC 3339) or 'Duration', i.e. `24h`. Note: This value cannot exceed the provisioners max duration.             | No       | `--not-after`          |
-| `provisioner`  | `acme`             | String, Name of provisioner to use.                                                                                            | No       | `--provisioner`        |
-| `token`        | not defined        | String, One-time token used to authenticate with the CA.                                                                       | No       | `--token`              |
-| `provisioner_pass_file`        | not defined        | String, Path to File with Provisioners Password. (Required for JK-Provisioner)                                                                       | No       | `--password-file`              |
+| Dictionary Key         | Default            | Description                                                                                                                    | Required | In-line Var Equivalent |
+| ---------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------------------- |
+| `name`                 | `ansible_fqdn`     | String, Name for the local files - certificate, key, and systemd timer.                                                        | No       |                        |
+| `subject`              | `ansible_fqdn`     | String, Common name, DNS name, or IP address that will be set as the subject for the certificate, e.g. `client01.example.com`. | No       |                        |
+| `path`                 | `/etc/step/certs/` | Path, Folder to store x509 certificate.                                                                                        | No       |                        |
+| `san_0`                | not defined        | String, Subject Alternative Name (SAN) for the x509 certificate, useful for setting the host IP in the x509 certificate.       | No       | `--san`                |
+| `san_1`                | not defined        | String, Additional SAN for the x509 certificate.                                                                               | No       | `--san`                |
+| `not_after`            | not defined        | String, 'Time' (RFC 3339) or 'Duration', i.e. `24h`. Note: This value cannot exceed the provisioners max duration.             | No       | `--not-after`          |
+| `provisioner`          | `acme`             | String, Name of provisioner to use.                                                                                            | No       | `--provisioner`        |
+| `token`                | not defined        | String, One-time token used to authenticate with the CA.                                                                       | No       | `--token`              |
+| `provisioner_pass_file`| not defined        | String, Path to File with Provisioners Password. (Required for JK-Provisioner)                                                 | No       | `--password-file`      |
 
 
 ## Dependencies
