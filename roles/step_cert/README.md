@@ -39,6 +39,8 @@ step_cert_list:
 | `not_after`    | not defined        | String, 'Time' (RFC 3339) or 'Duration', i.e. `24h`. Note: This value cannot exceed the provisioners max duration.             | No       | `--not-after`          |
 | `provisioner`  | `acme`             | String, Name of provisioner to use.                                                                                            | No       | `--provisioner`        |
 | `token`        | not defined        | String, One-time token used to authenticate with the CA.                                                                       | No       | `--token`              |
+| `provisioner_pass_file`        | not defined        | String, Path to File with Provisioners Password. (Required for JK-Provisioner)                                                                       | No       | `--password-file`              |
+
 
 ## Dependencies
 

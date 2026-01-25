@@ -27,6 +27,7 @@
     {% if item.san_0 is defined %}--san {{ item.san_0 }}{% endif %}
     {% if item.san_1 is defined %}--san {{ item.san_1 }}{% endif %}
     {% if item.not_after is defined %}--not-after {{ item.not_after }}{% endif %}
+    {% if item.provisioner_pass is defined %}--password-file {{ item.provisioner_pass_file }} {% endif %}
     {{ item.subject }}
     {{ item.path }}{{ item.name }}.crt
     {{ item.path }}{{ item.name }}.key
